@@ -1,0 +1,40 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "chaves.camila"
+    },
+    "jhipsterVersion": "6.6.0",
+    "applicationType": "monolith",
+    "baseName": "ChatBot",
+    "packageName": "chaves.camila",
+    "packageFolder": "chaves/camila",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "mysql",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "ODNhMGRiYWE3ZDA2Mjg4NzE3OTM5NWFmNjk5MTY1ZTY5ZTNmNDI0MWU4ODU1MjMzYTNiNzc2NDk3Mzg0Y2NiODU3MjQ2OTJjYzU4MmRmYjc3MDhjODU5ZWNiZmFiOWFlN2MwMDU0MWY1YzU5MDgzMzhmOTQ1NDQ2ZjIyOTZkYTc=",
+    "embeddableLaunchScript": false,
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "clientFramework": "angularX",
+    "clientTheme": "yeti",
+    "clientThemeVariant": "dark",
+    "creationTimestamp": 1585095837874,
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": false,
+    "blueprints": []
+  }
+}
