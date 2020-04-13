@@ -1,0 +1,52 @@
+entity Agente {
+	Identificador String
+	Nombre String
+    Disponible Boolean
+    Horario String
+}
+entity Conversacion {
+	Cliente String
+    SessionDF String
+    AuthorWA String
+    Inicio Instant
+    UltActCli Instant
+    Fin Instant
+}
+entity Chat {
+	Nombre String
+    Mensaje String
+    Fecha Instant
+    Archivo String
+}
+
+entity Producto {
+	Codigo String
+    Detalle String
+    DetAdicional String
+    Precio Long
+    Imagen String
+    Stock Long
+}
+entity Orden {
+	Numero Long
+    Cliente String
+    Fecha Instant
+    Total Long
+}
+entity LineaOrden {
+	Codigo String
+    Detalle String
+    Cantidad Long
+    Precio Long
+}
+
+relationship OneToMany {
+	Orden{lineaOrden} to LineaOrden{orden}
+}
+
+relationship ManyToOne {
+	Conversacion{agente} to Agente
+}
+relationship OneToMany {
+	Conversacion{chat} to  Chat{conversacion}
+}

@@ -1,0 +1,67 @@
+<div>
+    <h2 id="page-heading">
+        <span>Linea Ordens</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-linea-orden" [routerLink]="['/linea-orden/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span >
+            Create a new Linea Orden
+            </span>
+        </button>
+    </h2>
+    <jhi-alert-error></jhi-alert-error>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div class="alert alert-warning" *ngIf="lineaOrdens?.length === 0">
+        <span>No lineaOrdens found</span>
+    </div>
+    <div class="table-responsive" *ngIf="lineaOrdens?.length > 0">
+        <table class="table table-striped" aria-describedby="page-heading">
+            <thead>
+            <tr>
+            <th scope="col" ><span>ID</span></th>
+            <th scope="col" ><span>Codigo</span></th>
+            <th scope="col" ><span>Detalle</span></th>
+            <th scope="col" ><span>Cantidad</span></th>
+            <th scope="col" ><span>Precio</span></th>
+            <th scope="col" ><span>Orden</span></th>
+            <th scope="col"></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let lineaOrden of lineaOrdens ;trackBy: trackId">
+                <td><a [routerLink]="['/linea-orden', lineaOrden.id, 'view' ]">{{lineaOrden.id}}</a></td>
+                <td>{{lineaOrden.codigo}}</td>
+                <td>{{lineaOrden.detalle}}</td>
+                <td>{{lineaOrden.cantidad}}</td>
+                <td>{{lineaOrden.precio}}</td>
+                <td>
+                    <div *ngIf="lineaOrden.orden">
+                        <a [routerLink]="['/orden', lineaOrden.orden?.id, 'view' ]" >{{lineaOrden.orden?.id}}</a>
+                    </div>
+                </td>
+                <td class="text-right">
+                    <div class="btn-group">
+                        <button type="submit"
+                                [routerLink]="['/linea-orden', lineaOrden.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/linea-orden', lineaOrden.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline">Edit</span>
+                        </button>
+                        <button type="submit" (click)="delete(lineaOrden)"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

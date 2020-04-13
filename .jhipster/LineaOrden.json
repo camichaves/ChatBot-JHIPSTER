@@ -1,0 +1,40 @@
+{
+    "name": "LineaOrden",
+    "fields": [
+        {
+            "fieldName": "codigo",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "detalle",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "cantidad",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "precio",
+            "fieldType": "Long"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "orden",
+            "otherEntityRelationshipName": "lineaOrden",
+            "relationshipName": "orden",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200325003135",
+    "entityTableName": "linea_orden",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

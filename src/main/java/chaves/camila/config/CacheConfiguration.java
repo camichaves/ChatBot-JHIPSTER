@@ -42,6 +42,17 @@ public class CacheConfiguration {
             createCache(cm, chaves.camila.domain.User.class.getName());
             createCache(cm, chaves.camila.domain.Authority.class.getName());
             createCache(cm, chaves.camila.domain.User.class.getName() + ".authorities");
+            createCache(cm, chaves.camila.domain.Agente.class.getName());
+            createCache(cm, chaves.camila.domain.Conversacion.class.getName());
+            createCache(cm, chaves.camila.domain.Conversacion.class.getName() + ".chats");
+            createCache(cm, chaves.camila.domain.Chat.class.getName());
+            createCache(cm, chaves.camila.domain.Producto.class.getName());
+            createCache(cm, chaves.camila.domain.Orden.class.getName());
+            createCache(cm, chaves.camila.domain.Orden.class.getName() + ".detalles");
+            createCache(cm, chaves.camila.domain.LineaOrden.class.getName());
+            createCache(cm, chaves.camila.domain.Chat.class.getName() + ".conversacions");
+            createCache(cm, chaves.camila.domain.LineaOrden.class.getName() + ".ordens");
+            createCache(cm, chaves.camila.domain.Orden.class.getName() + ".lineaOrdens");
             // jhipster-needle-ehcache-add-entry
         };
     }
