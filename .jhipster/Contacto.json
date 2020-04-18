@@ -1,0 +1,32 @@
+{
+    "name": "Contacto",
+    "fields": [
+        {
+            "fieldName": "nombrePersona",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "authorWA",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "cliente",
+            "otherEntityRelationshipName": "contacto",
+            "relationshipName": "cliente",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200418014545",
+    "entityTableName": "contacto",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

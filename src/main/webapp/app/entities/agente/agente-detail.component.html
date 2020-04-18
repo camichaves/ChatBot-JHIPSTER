@@ -1,0 +1,39 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="agente">
+            <h2><span jhiTranslate="edgarBotApp.agente.detail.title">Agente</span> {{agente.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="edgarBotApp.agente.authorWA">Author WA</span></dt>
+                <dd>
+                    <span>{{agente.authorWA}}</span>
+                </dd>
+                <dt><span jhiTranslate="edgarBotApp.agente.nombre">Nombre</span></dt>
+                <dd>
+                    <span>{{agente.nombre}}</span>
+                </dd>
+                <dt><span jhiTranslate="edgarBotApp.agente.disponible">Disponible</span></dt>
+                <dd>
+                    <span>{{agente.disponible}}</span>
+                </dd>
+                <dt><span jhiTranslate="edgarBotApp.agente.horario">Horario</span></dt>
+                <dd>
+                    <span>{{agente.horario}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/agente', agente.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

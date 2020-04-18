@@ -1,0 +1,55 @@
+{
+    "name": "Conversacion",
+    "fields": [
+        {
+            "fieldName": "sessionDF",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "authorWA",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "inicio",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "ultActCli",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "fin",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "Boolean"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "agente",
+            "otherEntityRelationshipName": "conversacion",
+            "relationshipName": "agente",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "cliente",
+            "otherEntityRelationshipName": "conversacion",
+            "relationshipName": "cliente",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200418014539",
+    "entityTableName": "conversacion",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

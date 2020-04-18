@@ -1,0 +1,32 @@
+{
+    "name": "Agente",
+    "fields": [
+        {
+            "fieldName": "authorWA",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "nombre",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "disponible",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "horario",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20200418014538",
+    "entityTableName": "agente",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

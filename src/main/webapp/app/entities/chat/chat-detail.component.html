@@ -1,0 +1,45 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="chat">
+            <h2><span jhiTranslate="edgarBotApp.chat.detail.title">Chat</span> {{chat.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="edgarBotApp.chat.authorWA">Author WA</span></dt>
+                <dd>
+                    <span>{{chat.authorWA}}</span>
+                </dd>
+                <dt><span jhiTranslate="edgarBotApp.chat.mensaje">Mensaje</span></dt>
+                <dd>
+                    <span>{{chat.mensaje}}</span>
+                </dd>
+                <dt><span jhiTranslate="edgarBotApp.chat.fecha">Fecha</span></dt>
+                <dd>
+                    <span>{{chat.fecha}}</span>
+                </dd>
+                <dt><span jhiTranslate="edgarBotApp.chat.archivo">Archivo</span></dt>
+                <dd>
+                    <span>{{chat.archivo}}</span>
+                </dd>
+                <dt><span jhiTranslate="edgarBotApp.chat.conversacion">Conversacion</span></dt>
+                <dd>
+                    <div *ngIf="chat.conversacion">
+                        <a [routerLink]="['/conversacion', chat.conversacion?.id, 'view']">{{chat.conversacion?.id}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/chat', chat.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

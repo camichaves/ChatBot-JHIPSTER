@@ -1,0 +1,29 @@
+{
+  "edgarBotApp": {
+    "conversacion": {
+      "home": {
+        "title": "Conversacions",
+        "createLabel": "Create a new Conversacion",
+        "createOrEditLabel": "Create or edit a Conversacion",
+        "notFound": "No Conversacions found"
+      },
+      "created": "A new Conversacion is created with identifier {{ param }}",
+      "updated": "A Conversacion is updated with identifier {{ param }}",
+      "deleted": "A Conversacion is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Conversacion {{ id }}?"
+      },
+      "detail": {
+        "title": "Conversacion"
+      },
+      "sessionDF": "Session DF",
+      "authorWA": "Author WA",
+      "inicio": "Inicio",
+      "ultActCli": "Ult Act Cli",
+      "fin": "Fin",
+      "status": "Status",
+      "agente": "Agente",
+      "cliente": "Cliente"
+    }
+  }
+}

@@ -1,0 +1,59 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="conversacion">
+            <h2><span jhiTranslate="edgarBotApp.conversacion.detail.title">Conversacion</span> {{conversacion.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="edgarBotApp.conversacion.sessionDF">Session DF</span></dt>
+                <dd>
+                    <span>{{conversacion.sessionDF}}</span>
+                </dd>
+                <dt><span jhiTranslate="edgarBotApp.conversacion.authorWA">Author WA</span></dt>
+                <dd>
+                    <span>{{conversacion.authorWA}}</span>
+                </dd>
+                <dt><span jhiTranslate="edgarBotApp.conversacion.inicio">Inicio</span></dt>
+                <dd>
+                    <span>{{conversacion.inicio}}</span>
+                </dd>
+                <dt><span jhiTranslate="edgarBotApp.conversacion.ultActCli">Ult Act Cli</span></dt>
+                <dd>
+                    <span>{{conversacion.ultActCli}}</span>
+                </dd>
+                <dt><span jhiTranslate="edgarBotApp.conversacion.fin">Fin</span></dt>
+                <dd>
+                    <span>{{conversacion.fin}}</span>
+                </dd>
+                <dt><span jhiTranslate="edgarBotApp.conversacion.status">Status</span></dt>
+                <dd>
+                    <span>{{conversacion.status}}</span>
+                </dd>
+                <dt><span jhiTranslate="edgarBotApp.conversacion.agente">Agente</span></dt>
+                <dd>
+                    <div *ngIf="conversacion.agente">
+                        <a [routerLink]="['/agente', conversacion.agente?.id, 'view']">{{conversacion.agente?.id}}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="edgarBotApp.conversacion.cliente">Cliente</span></dt>
+                <dd>
+                    <div *ngIf="conversacion.cliente">
+                        <a [routerLink]="['/cliente', conversacion.cliente?.id, 'view']">{{conversacion.cliente?.id}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/conversacion', conversacion.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

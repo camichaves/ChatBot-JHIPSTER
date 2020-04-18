@@ -1,0 +1,40 @@
+{
+    "name": "Chat",
+    "fields": [
+        {
+            "fieldName": "authorWA",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "mensaje",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "fecha",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "archivo",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "conversacion",
+            "otherEntityRelationshipName": "chat",
+            "relationshipName": "conversacion",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200418014540",
+    "entityTableName": "chat",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}
